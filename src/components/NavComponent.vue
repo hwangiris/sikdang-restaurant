@@ -28,7 +28,7 @@
             <router-link to="/recipes" class="nav-link">韓餐食譜</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/restaurant" class="btn btn-primary">預約私房菜</router-link>
+            <router-link to="/booking" class="btn btn-primary">預約私房菜</router-link>
           </li>
         </ul>
       </div>

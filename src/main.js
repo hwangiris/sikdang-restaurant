@@ -4,6 +4,7 @@ import { createApp } from 'vue';
 // axios
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import 'bootstrap';
 
 import emitter from '@/script/mitt';
 import Nav from '@/components/NavComponent.vue';
