@@ -1,5 +1,5 @@
 <template>
-  <main class="product__page">
+  <main class="recipe__page">
   </main>
 </template>
 

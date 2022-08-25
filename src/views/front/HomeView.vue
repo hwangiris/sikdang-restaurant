@@ -21,10 +21,7 @@
         我們不僅提供食譜與圖解的做法，還包含料理小故事
       </div>
     </section>
-    <section class="recommend">
-      <div class="container">
-      </div>
-    </section>
+    <IndexRecommend />
     <section class="faq">
       <div class="container">
         <div class="row">
@@ -134,16 +131,22 @@
 
 <script>
 import IndexOpening from '@/components/IndexOpening.vue';
+import IndexRecommend from '@/components/IndexRecommend.vue';
 
 export default {
   name: 'IndexView',
   components: {
     IndexOpening,
+    IndexRecommend,
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import '~bootstrap/scss/functions';
+@import '@/assets/sass/variables';
+@import '~bootstrap/scss/mixins';
+
 section {
   padding-top: 100px;
   padding-bottom: 100px;

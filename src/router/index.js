@@ -55,6 +55,13 @@ const routes = [
       title: '登入',
     },
   }, {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/RegisterView.vue'),
+    meta: {
+      title: '註冊',
+    },
+  }, {
     path: '/:pathMatch(.*)*',
     name: '404',
     component: () => import('@/views/ErrorView.vue'),
@@ -70,13 +77,13 @@ const routes = [
     },
     children: [
       {
-        path: 'products',
+        path: 'recipes',
         component: () => import('@/views/admin/RecipesView.vue'),
         meta: {
           title: '列表管理',
         },
       }, {
-        path: 'product',
+        path: 'recipe',
         component: () => import('@/views/admin/RecipeView.vue'),
         meta: {
           title: '食譜管理',
