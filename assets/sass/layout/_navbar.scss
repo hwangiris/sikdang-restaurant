@@ -11,6 +11,33 @@
   }
 }
 
+.navbar-nav {
+  .nav-link {
+    @at-root aside #{&} {
+      --bs-nav-link-padding-y: 0;
+      --bs-nav-link-hover-color: #{$primary};
+      padding-bottom: 5px;
+      border: solid transparent;
+      border-width: 2px 0;
+      @include media-breakpoint-up(md) {
+        padding-left: 10px;
+        padding-bottom: 0;
+        border-width: 0 2px;
+      }
+      &.active {
+        border-bottom-color: $primary;
+        @include media-breakpoint-up(md) {
+          border-left-color: $primary;
+          border-bottom-color: transparent;
+        }
+        &:hover {
+          --bs-navbar-active-color: #{$primary};
+        }
+      }
+    }
+  }
+}
+
 .navbar-brand {
   img {
     height: 40px;

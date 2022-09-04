@@ -26,3 +26,18 @@ section {
     }
   }
 }
+
+.font-serif {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+aside {
+  @include media-breakpoint-up(md) {
+    position: sticky;
+    top: 40px;
+  }
+}
