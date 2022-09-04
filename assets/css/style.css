@@ -12713,7 +12713,7 @@ section.background-cover > * {
 
 .navbar .nav-link {
   border: solid transparent;
-  border-width: 2px 0;
+  border-width: 3px 0;
 }
 
 @media (min-width: 768px) {
