@@ -1,0 +1,18 @@
+.navbar {
+  .nav-link {
+    border: solid transparent;
+    border-width: 2px 0;
+    @include media-breakpoint-up(md) {
+      --bs-nav-link-padding-y: 1.625rem;
+    }
+    &:hover {
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+.navbar-brand {
+  img {
+    height: 40px;
+  }
+}

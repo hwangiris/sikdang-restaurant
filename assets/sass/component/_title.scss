@@ -1,0 +1,7 @@
+.section__title {
+  hr {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, $primary 0%,$primary 50%, $danger 50%,$danger 100%);
+  }
+}

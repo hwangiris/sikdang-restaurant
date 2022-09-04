@@ -1,0 +1,15 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./bootstrap/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "./bootstrap/bootstrap";
+
+@import "./layout/page";
+@import "./layout/navbar";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./component/title";
+@import "./component/card";
+@import "./component/accordion";
+@import "./component/swiper";
