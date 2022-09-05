@@ -17,6 +17,7 @@
       --bs-nav-link-padding-y: 0;
       --bs-nav-link-hover-color: #{$primary};
       padding-bottom: 5px;
+      background-color: transparent;
       border: solid transparent;
       border-width: 2px 0;
       @include media-breakpoint-up(md) {

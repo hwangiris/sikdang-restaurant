@@ -8,7 +8,6 @@
 
 @import "./layout/page";
 @import "./layout/navbar";
-@import "./layout/header";
 @import "./layout/footer";
 
 @import "./component/title";
@@ -16,3 +15,6 @@
 @import "./component/accordion";
 @import "./component/swiper";
 @import "./component/blockquote";
+
+@import "./pages/index";
+@import "./pages/recipe";

@@ -23,7 +23,7 @@
     height: calc(100% - 25px);
     background: linear-gradient(to right, $primary 0%,$primary 50%, $danger 50%,$danger 100%);
     transform: translate(-50%, -50%);
-    transition: all 0.5s;
+    transition: width 0.5s, height 0.5s;
     z-index: 0;
     @at-root :hover#{&} {
       width: 100%;
