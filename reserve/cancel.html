@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>關於食堂｜一起吃飯吧！食堂韓料食譜及食堂私廚餐桌</title>
+	<title>預約取消｜食堂私廚餐桌｜一起吃飯吧！食堂韓料食譜及食堂私廚餐桌</title>
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="reserve-page">
 	<nav class="navbar navbar-expand-md py-md-0 border-bottom">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">
@@ -40,51 +40,33 @@
 	<main class="flex-fill">
     <section>
       <div class="container">
-        <div class="row">
+        <h1 class="section__title fs-md-1 fs-2 pb-10 mb-0 text-center">
+          食堂私廚餐桌
+          <hr class="my-10 mx-auto opacity-100 border-0">
+        </h1>
+        <div class="row pt-30">
           <aside class="col-md-2 align-self-start mb-md-0 mb-40">
             <ul class="navbar-nav justify-content-center flex-md-column flex-row gap-20 mb-0">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">關於食堂</a>
+                <a href="index.html" class="nav-link">私廚預約</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="chief.html">料理師</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="restaurant.html">餐廳介紹</a>
+                <a href="cancel.html" class="nav-link active">預約取消</a>
               </li>
             </ul>
           </aside>
-          <div class="col-md-10">
-            <h1 class="section__title fs-md-1 fs-2 pb-20 mb-0 text-md-start text-center">
-              關於食堂
-              <hr class="my-10 mx-md-0 mx-auto opacity-100 border-0">
-            </h1>
-            <p>
-              書節不心現的定斯的孩：始候員再背在說字級開同辦兩……氣環當，動位等子話不爭導兩遠國質。
-            </p>
-            <p>
-              神白為玩曾種到，出力著縣關開舉部也代甚區為下不活金趣告看金；元定的投是名；音產保說日作曾問計道。幾多相示雄，公作有勢不訴離最愛又如題樹的發水他而紅經生特散一。場自了家種爾我百消又它發金日我的裡爭天法食維了響建見坐正條名機小前列晚口區務車主家，色也廣書能對小陽應步及學開的媽得，從護腳會轉個。片情才聽布能龍、處而使腦城兩不經多比聽大以朋年兒到點超評上世大只立較及水的還……有飛外能蘭裡素合港界環史環那展法法；民打雄看自是員。
-            </p>
-            <p>
-              食面他人管根只黃於推遊要而反雜怎兩我創原重詩太；花上一文工者印人了想，希母以義口毒而學程起要的何應：頭化我關期土方：所做美育。來頭常單水人面分相……這時清但它。市保教緊反業父，在很樣的！
-            </p>
-          </div>
-          <div class="col-md-12 px-md-20 px-0 py-md-40 my-40">
-            <div class="ratio ratio-16x9">
-              <img src="../assets/images/about-table.jpg" class="img-fluid object-fit-cover" alt="韓國餐桌">
-            </div>
-          </div>
-          <div class="col-md-5 offset-md-2 mb-md-0 mb-40">
-            <blockquote class="text-md-start text-center">
-              <h2 class="font-serif fs-lg-2 fs-3 mb-20">
-                我們致力於尋找韓國菜的食譜，並簡化成家庭也能製作的方式
-              </h2>
-              <div class="text-gray">《食堂》一起吃飯吧</div>
-            </blockquote>
-          </div>
-          <div class="col-md-5 col-10 offset-md-0 offset-1">
-            <div class="ratio ratio-16x9">
-              <img src="../assets/images/about-cooking.jpg" class="object-fit-cover" alt="韓國製作">
+          <div class="col-xl-8 col-md-10">
+            <div class="row justify-content-center">
+              <form action="detail.html" method="get" class="col-md-6">
+                <div class="mb-20">
+                  <label for="inputCode" class="form-label d-none">請輸入訂單編號*</label>
+                  <input type="text" class="form-control" id="inputCode" placeholder="請輸入訂單編號*">
+                  <p class="fs-6 text-secondary px-20 mt-10 mb-0">* 訂單編號在預約完成時寄送至信箱</p>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary mt-20">查詢預約資訊</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
