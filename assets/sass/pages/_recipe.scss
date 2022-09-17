@@ -26,6 +26,11 @@
     }
   }
   article {
-    gap: 60px
+    gap: 60px;
+  }
+  .history, .knowledge {
+    p {
+      white-space: break-spaces;
+    }
   }
 }

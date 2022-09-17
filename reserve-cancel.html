@@ -4,17 +4,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>料理師｜一起吃飯吧！食堂韓料食譜及食堂私廚餐桌</title>
-  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+	<title>預約取消｜食堂私廚餐桌｜一起吃飯吧！食堂韓料食譜及食堂私廚餐桌</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="reserve-page">
 	<nav class="navbar navbar-expand-md py-md-0 border-bottom">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">
-				<img src="../assets/images/logo-black.svg" alt="食堂">
+				<img src="assets/images/logo-black.svg" alt="食堂">
 			</a>
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -22,16 +22,16 @@
 			<div class="collapse navbar-collapse" id="navbars">
 				<ul class="navbar-nav align-items-center gap-20 ms-auto mb-0">
 					<li class="nav-item">
-						<a href="../index.html" class="nav-link">首頁</a>
+						<a href="index.html" class="nav-link">首頁</a>
 					</li>
 					<li class="nav-item">
-						<a href="../about/index.html" class="nav-link">關於食堂</a>
+						<a href="about.html" class="nav-link">關於食堂</a>
 					</li>
 					<li class="nav-item">
-						<a href="../recipes.html" class="nav-link">韓餐食譜</a>
+						<a href="recipes.html" class="nav-link">韓餐食譜</a>
 					</li>
 					<li class="nav-item">
-						<a href="../reserve/index.html" class="btn btn-primary">預約私房菜</a>
+						<a href="reserve.html" class="btn btn-primary">預約私房菜</a>
 					</li>
 				</ul>
 			</div>
@@ -40,40 +40,34 @@
 	<main class="flex-fill">
     <section>
       <div class="container">
-        <div class="row">
+        <h1 class="section__title fs-md-1 fs-2 pb-10 mb-0 text-center">
+          食堂私廚餐桌
+          <hr class="my-10 mx-auto opacity-100 border-0">
+        </h1>
+        <div class="row pt-30">
           <aside class="col-md-2 align-self-start mb-md-0 mb-40">
             <ul class="navbar-nav justify-content-center flex-md-column flex-row gap-20 mb-0">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">關於食堂</a>
+                <a href="index.html" class="nav-link">私廚預約</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="chief.html">料理師</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="restaurant.html">餐廳介紹</a>
+                <a href="cancel.html" class="nav-link active">預約取消</a>
               </li>
             </ul>
           </aside>
-          <div class="col-md-4 mb-md-0 mb-20">
-            <h1 class="section__title fs-md-1 fs-2 pb-20 mb-0 text-md-start text-center">
-              金睿彬 <span class="h3 text-gray">김예빈</span>
-              <hr class="my-10 mx-md-0 mx-auto opacity-100 border-0">
-            </h1>
-            <p>
-              人稱金姨母。雖然姓金，但絕對是土生土長台灣人。因為熱愛 Kpop 所以開始喜歡韓國，隨著深入了解，就更想去前往當地體驗生活。
-            </p>
-            <p>
-              在台灣畢業工作一段時間後，開始規劃前往韓國，趁著讀語學堂與 Working Holiday 期間，遊歷韓國大大小小的市場、餐廳、景點等。回台灣後對韓國食物念念不忘之下，創立了《食堂》分享食譜。
-            </p>
-            <p>
-              不僅教做菜，更教人懂菜，由飲食文化談起，從備料重點、製作技巧、延伸應用到保存期限等起源與知識。預期大家會在家庭式廚房做出我們的料理，簡化、調整到讓人可以輕鬆跟著我們 Step by Step，做出不平凡的一日三餐。
-            </p>
-            <p>
-              近年還開設了食堂私廚餐桌，原本只為了招待朋友來吃難以自己處理的料理，現在將廚房公開預約，將線上網友變成線下朋友。
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img src="../assets/images/about-chief.jpg" class="img-fluid" alt="金睿彬">
+          <div class="col-xl-8 col-md-10">
+            <div class="row justify-content-center">
+              <form action="detail.html" method="get" class="col-md-6">
+                <div class="mb-20">
+                  <label for="inputCode" class="form-label d-none">請輸入訂單編號*</label>
+                  <input type="text" class="form-control" id="inputCode" placeholder="請輸入訂單編號*">
+                  <p class="fs-6 text-secondary px-20 mt-10 mb-0">* 訂單編號在預約完成時寄送至信箱</p>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary mt-20">查詢預約資訊</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +78,7 @@
 			<div class="row g-20 align-items-center">
 				<div class="col-md-2">
 					<a class="navbar-brand d-table mx-md-0 mx-auto" href="index.html">
-						<img src="../assets/images/logo-black.svg" alt="食堂">
+						<img src="assets/images/logo-black.svg" alt="食堂">
 					</a>
 				</div>
 				<div class="col-md-8 d-md-block d-none">
