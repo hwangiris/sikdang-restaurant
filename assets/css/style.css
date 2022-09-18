@@ -13391,7 +13391,13 @@ blockquote::after {
 
 .recipe-page header {
   position: relative;
-  height: 800px;
+  height: 600px;
+}
+
+@media (min-width: 768px) {
+  .recipe-page header {
+    height: 800px;
+  }
 }
 
 .recipe-page header::before {
@@ -13422,6 +13428,18 @@ blockquote::after {
 
 .recipe-page article {
   gap: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .recipe-page aside {
+    overflow: scroll;
+  }
+  .recipe-page aside > ul {
+    width: 570px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .recipe-page .history p, .recipe-page .knowledge p {

@@ -1,7 +1,10 @@
 .recipe-page {
   header {
     position: relative;
-    height: 800px;
+    height: 600px;
+    @include media-breakpoint-up(md) {
+      height: 800px;
+    }
     &::before {
       content: '';
       display: block;
@@ -27,6 +30,15 @@
   }
   article {
     gap: 60px;
+  }
+  aside {
+    @include media-breakpoint-down(md) {
+      overflow: scroll;
+      > ul {
+        width: 570px;
+        align-items: center;
+      }
+    }
   }
   .history, .knowledge {
     p {
