@@ -1,0 +1,43 @@
+---
+title: 預約取消｜食堂私廚餐桌｜
+layout: ./app/layout.ejs
+engine: ejs
+current: reserve
+---
+
+<main class="flex-fill">
+  <section>
+    <div class="container">
+      <h1 class="section__title fs-md-1 fs-2 pb-10 mb-0 text-center">
+        食堂私廚餐桌
+        <hr class="my-10 mx-auto opacity-100 border-0">
+      </h1>
+      <div class="row pt-30">
+        <aside class="col-md-2 align-self-start mb-md-0 mb-40">
+          <ul class="navbar-nav justify-content-center flex-md-column flex-row gap-20 mb-0">
+            <li class="nav-item">
+              <a href="reserve.html" class="nav-link">私廚預約</a>
+            </li>
+            <li class="nav-item">
+              <a href="reserve-cancel.html" class="nav-link active">預約取消</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="col-xl-8 col-md-10">
+          <div class="row justify-content-center">
+            <form action="reserve-detail.html" method="get" class="col-md-6">
+              <div class="mb-20">
+                <label for="inputCode" class="form-label d-none">請輸入訂單編號*</label>
+                <input type="text" class="form-control" id="inputCode" placeholder="請輸入訂單編號*">
+                <p class="fs-6 text-secondary px-20 mt-10 mb-0">* 訂單編號在預約完成時寄送至信箱</p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-20">查詢預約資訊</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

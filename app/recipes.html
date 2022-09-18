@@ -1,0 +1,71 @@
+---
+title: 韓餐食譜｜
+layout: ./app/layout.ejs
+engine: ejs
+current: recipes
+---
+
+<main id="app" class="flex-fill">
+  <transition>
+    <div v-show="loading" class="overlay position-absolute top-0 start-0 align-items-center justify-content-center w-100 h-100 bg-white z-index-2">
+      <img src="assets/images/loading.gif" class="w-25" alt="載入動畫">
+    </div>
+  </transition>
+  <section>
+    <div class="container">
+      <h1 class="section__title fs-md-1 fs-2 pb-10 mb-0 text-center">
+        韓餐食譜
+        <hr class="my-10 mx-auto opacity-100 border-0">
+      </h1>
+      <div class="row justify-content-center mb-40 pb-10">
+        <div class="col-md-6">
+          <p class="text-secondary text-center mb-20">
+            我們致力於尋找韓國菜的食譜，並簡化成家庭也能製作的方式
+          </p>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <form action="search.html" method="get" class="position-relative" role="search">
+                <input v-model="search" name="text" type="text" class="form-control" placeholder="請輸入想搜尋的食譜" aria-label="Search">
+                <button class="btn btn-link position-absolute top-50 end-0 translate-middle-y py-10 px-20" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="col-md-2 align-self-start mb-md-0 mb-40">
+          <ul class="navbar-nav justify-content-center flex-md-column flex-row gap-20 mb-0">
+            <li class="nav-item">
+              <button type="button" class="nav-link" @click="filter('全部')">全部</button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" @click="filter('傳統飲食')">傳統飲食</button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" @click="filter('燉菜類')">燉菜類</button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" @click="filter('小菜')">小菜</button>
+            </li>
+          </ul>
+        </aside>
+        <div class="col-md-10">
+          <div class="row g-40">
+            <div class="col-md-3 col-6" v-for="item in list">
+              <div class="card card-dish border-0">
+                <div class="card-img position-relative p-10">
+                  <span class="img-circle rounded-circle"></span>
+                  <img :src="item.picture.thumbnail" class="img-fluid position-relative" :alt="item.name" referrerpolicy="no-referrer">
+                </div>
+                <div class="card-body pt-20 pb-0 px-0 text-center">
+                  <div class="card-title fs-4 mb-0">{{item.name}}</div>
+                  <a :href="`recipe.html?id=${item.id}`" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

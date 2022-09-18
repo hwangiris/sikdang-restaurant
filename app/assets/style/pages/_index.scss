@@ -1,0 +1,134 @@
+.index-page {
+  header {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, $primary 0%,$primary 50%, $danger 50%,$danger 100%);
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background: linear-gradient(to right, $primary 0%,$primary 50%, $danger 50%,$danger 100%);
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      padding-top: 120%;
+      background-color: $primary;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      @include media-breakpoint-up(md) {
+        left: 40%;
+        width: 1000px;
+        padding-top: 1000px;
+      }
+    }
+    > div {
+      position: relative;
+    }
+    .dish-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(to bottom, $primary 0%, $primary 70%, rgba($primary, 0) 100%);
+      @include media-breakpoint-up(md) {
+        width: 55%;
+        height: 100%;
+        background: linear-gradient(to right, $primary 0%, $primary 70%, rgba($primary, 0) 100%);
+      }
+      z-index: 2;
+    }
+    .slogan {
+      width: 310px;
+    }
+  }
+  .slider-circle {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    width: 190%;
+    padding-top: 190%;
+    margin-top: -95%;
+    margin-left: -95%;
+    border-radius: 50%;
+    animation: spinMB 15s infinite forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    @include media-breakpoint-up(md) {
+      top: 50%;
+      left: -10.4vw;
+      animation: spinPC 15s infinite forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    img {
+      position: absolute;
+      width: 45%;
+      transform: translate(-50%, -50%);
+      &:nth-child(1) {
+        top: 0;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        top: 75%;
+        left: 7%;
+        animation-delay: 5s;
+      }
+      &:nth-child(3) {
+        top: 75%;
+        left: 93%;
+        animation-delay: 10s;
+      }
+    }
+  }
+}
+
+@keyframes spinPC {
+  0% {
+    transform: rotate(90deg);
+  }
+  8% {
+    transform: rotate(90deg);
+  }
+  33% {
+    transform: rotate(210deg);
+  }
+  41% {
+    transform: rotate(210deg);
+  }
+  66% {
+    transform: rotate(330deg);
+  }
+  74% {
+    transform: rotate(330deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes spinMB {
+  0% {
+    transform: rotate(180deg);
+  }
+  8% {
+    transform: rotate(180deg);
+  }
+  33% {
+    transform: rotate(300deg);
+  }
+  41% {
+    transform: rotate(300deg);
+  }
+  66% {
+    transform: rotate(420deg);
+  }
+  74% {
+    transform: rotate(420deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}

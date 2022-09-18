@@ -1,0 +1,9 @@
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .nav-link {
+    --bs-nav-link-padding-y: .25rem;
+    --bs-nav-link-color: #{$secondary};
+    --bs-nav-link-hover-color: #{$black};
+  }
+}

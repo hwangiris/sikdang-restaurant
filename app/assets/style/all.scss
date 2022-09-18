@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@600&family=Roboto:wght@400;700&display=swap');
+
+// Required
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./bootstrap/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "./bootstrap/bootstrap";
+
+@import "./layout/page";
+@import "./layout/navbar";
+@import "./layout/footer";
+
+@import "./component/title";
+@import "./component/card";
+@import "./component/accordion";
+@import "./component/swiper";
+@import "./component/blockquote";
+@import "./component/overlay";
+
+@import "./pages/index";
+@import "./pages/recipe";
+@import "./pages/reserve";

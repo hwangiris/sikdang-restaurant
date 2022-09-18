@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %>一起吃飯吧！食堂韓料食譜及食堂私廚餐桌</title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body class="<%- current %>-page">
+    <nav class="navbar navbar-expand-md py-md-0 border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/logo-black.svg" alt="食堂">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+          <ul class="navbar-nav align-items-center gap-20 ms-auto mb-0">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">關於食堂</a>
+            </li>
+            <li class="nav-item">
+              <a href="recipes.html" class="nav-link">韓餐食譜</a>
+            </li>
+            <li class="nav-item">
+              <a href="reserve.html" class="btn btn-primary">預約私房菜</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <%- contents %>
+
+    <footer class="bg-light">
+      <div class="container">
+        <div class="row g-20 align-items-center">
+          <div class="col-md-2">
+            <a class="navbar-brand d-table mx-md-0 mx-auto" href="index.html">
+              <img src="./assets/images/logo-black.svg" alt="食堂">
+            </a>
+          </div>
+          <div class="col-md-8 d-md-block d-none">
+            <ul class="navbar-nav flex-row justify-content-center gap-20 mb-0 fw-bold">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">關於食堂</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recipes.html">韓餐食譜</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reserve.html">預約私房菜</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled d-flex align-items-center justify-content-md-end justify-content-center gap-20 mb-0 fs-3">
+              <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#!"><i class="fa-brands fa-line"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-12 fs-6 fw-bold text-center text-secondary">
+            © 2022 Sikdang Restaurant by Iris. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <% if( current === 'recipe' || current === 'recipes' || current === 'search' ){ %>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+      <script src="./assets/js/<%- current %>.js" type="module"></script>
+    <% } else{ %>
+      <script src="./assets/js/all.js"></script>
+    <% } %>
+  </body>
+
+</html>
