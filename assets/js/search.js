@@ -9,13 +9,15 @@ const database = firebase.database();
 const app = createApp({
   data() {
     return {
+      keyword: '',
+      channel: [],
       list: [],
       temp: [],
-      search: '',
       loading: true,
     }
   },
   mounted() {
+    this.keyword = decodeURI(window.location.search.split('text=')[1]);
     this.getData();
   },
   methods: {
@@ -30,16 +32,28 @@ const app = createApp({
         });
       })
       .then(() => {
+        this.search(this.keyword);
         this.temp = this.list;
         this.loading = false;
       });
     },
-    filter(type) {
+    search(keyword) {
+      this.list = this.list.filter((element) => {
+        return element.name.indexOf(keyword) > -1;
+      });
+    },
+    filter() {
       this.list = this.temp; // 先把列表重置回全部
-      if ( type !== '全部' ) {
-        this.list = this.list.filter((element) => {
-          return element.channel === type;
+      const temp = [];
+      if ( !this.channel.includes('全部') ) {
+        this.channel.forEach((el) => {
+          this.list.filter((element) => {
+            if ( element.channel === el ) {
+              temp.push(element);
+            }
+          });
         });
+        this.list = temp;
       }
     },
   }

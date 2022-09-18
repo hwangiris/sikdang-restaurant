@@ -50,7 +50,10 @@
       </div>
     </header>
     <main>
-      <section>
+      <div v-if="loading" class="overlay position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 bg-white z-index-2">
+        <img src="assets/images/loading.gif" class="w-25" alt="載入動畫">
+      </div>
+      <section v-else>
         <div class="container">
           <div class="row">
             <aside class="col-xl-2 col-md-3 align-self-start mb-md-0 mb-40">

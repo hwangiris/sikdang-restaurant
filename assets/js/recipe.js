@@ -12,6 +12,7 @@ const app = createApp({
       id: '',
       list: {},
       ingredient: [],
+      loading: true,
     }
   },
   mounted() {
@@ -40,6 +41,7 @@ const app = createApp({
           };
           this.ingredient[index] = data;
         });
+        this.loading = false;
       });
     },
   }

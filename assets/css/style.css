@@ -12838,6 +12838,14 @@ section.background-cover > * {
   }
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
 .navbar .nav-link {
   border: solid transparent;
   border-width: 3px 0;
@@ -13161,7 +13169,26 @@ blockquote::after {
 
 .index-page header > div {
   position: relative;
-  z-index: 1;
+}
+
+.index-page header .dish-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0047A0), color-stop(70%, #0047A0), to(rgba(0, 71, 160, 0)));
+  background: linear-gradient(to bottom, #0047A0 0%, #0047A0 70%, rgba(0, 71, 160, 0) 100%);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .index-page header .dish-mask {
+    width: 55%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#0047A0), color-stop(70%, #0047A0), to(rgba(0, 71, 160, 0)));
+    background: linear-gradient(to right, #0047A0 0%, #0047A0 70%, rgba(0, 71, 160, 0) 100%);
+  }
 }
 
 .index-page header .slogan {
@@ -13193,11 +13220,8 @@ blockquote::after {
 .index-page .slider-circle img {
   position: absolute;
   width: 45%;
-  opacity: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: fadeIn 15s infinite forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          animation: fadeIn 15s infinite forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .index-page .slider-circle img:nth-child(1) {
@@ -13207,14 +13231,14 @@ blockquote::after {
 
 .index-page .slider-circle img:nth-child(2) {
   top: 75%;
-  left: 10%;
+  left: 7%;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
 
 .index-page .slider-circle img:nth-child(3) {
   top: 75%;
-  left: 90%;
+  left: 93%;
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }
@@ -13340,48 +13364,6 @@ blockquote::after {
   100% {
     -webkit-transform: rotate(540deg);
             transform: rotate(540deg);
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  19% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-  89% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  19% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-  89% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

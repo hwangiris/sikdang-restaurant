@@ -38,7 +38,10 @@
 		</div>
 	</nav>
 	<main id="app" class="flex-fill">
-    <section>
+    <div v-if="loading" class="overlay position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 bg-white z-index-2">
+      <img src="assets/images/loading.gif" class="w-25" alt="載入動畫">
+    </div>
+    <section v-else>
       <div class="container">
         <h1 class="section__title fs-md-1 fs-2 pb-10 mb-0 text-center">
           韓餐食譜
@@ -52,7 +55,7 @@
             <div class="row justify-content-center">
               <div class="col-md-8">
                 <form action="search.html" method="get" class="position-relative" role="search">
-                  <input type="text" class="form-control" placeholder="請輸入想搜尋的食譜" aria-label="Search">
+                  <input v-model="search" name="text" type="text" class="form-control" placeholder="請輸入想搜尋的食譜" aria-label="Search">
                   <button class="btn btn-link position-absolute top-50 end-0 translate-middle-y py-10 px-20" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
               </div>
