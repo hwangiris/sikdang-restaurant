@@ -1,0 +1,29 @@
+@import "import";
+@import "common";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  &.opened {
+    overflow: hidden;
+  }
+}
+
+@import "icon";
+@import "font";
+
+.text-decoration {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: from-font;
+}
+
+@import "space";
+@import "container";
+@import "grid";
+
+@import "header";
+@import "footer";

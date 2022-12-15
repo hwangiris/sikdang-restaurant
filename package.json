@@ -1,0 +1,28 @@
+{
+  "name": "sikdang-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/device": "^2.1.0",
+    "@nuxtjs/moment": "^1.6.1",
+    "axios": "^0.27.2",
+    "cookie-universal-nuxt": "^2.2.1",
+    "core-js": "^3.25.3",
+    "node-sass": "^6.0.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.15.8",
+    "nuxt-jsonld": "^1.5.3",
+    "sass-loader": "^10",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-template-compiler": "^2.7.10"
+  }
+}
